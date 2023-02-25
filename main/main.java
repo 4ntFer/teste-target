@@ -1,0 +1,30 @@
+package main;
+
+public class main {
+
+	public static void main(String[] args) {
+		System.out.println(verificaFibonacci(4));
+		System.out.println(verificaFibonacci(0));
+		System.out.println(verificaFibonacci(1));
+		System.out.println(verificaFibonacci(21));
+		
+
+	}
+	
+	public static String verificaFibonacci(int val) {
+		int a = 0, b = 1, result = 0;
+		
+		while(result < val) {
+			result = a + b;
+			a = b;
+			b = result;
+		}
+		
+		if(val == result) {
+			return ("" + val + " estah presente na sequencia de fibonacci.");
+		}else {
+			return ("" + val + " nao estah presente na sequencia de fibonacci.");
+		}
+	}
+
+}
