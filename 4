@@ -1,0 +1,28 @@
+public class main {
+	public static double fat_sp = 67836.43, 
+			fat_rj = 36678.66,
+			fat_mg = 29229.88,
+			fat_es = 27165.48,
+			fat_outros = 19849.53,
+			fat_total = fat_sp + fat_rj + fat_mg + fat_es + fat_outros,
+			
+			rep_sp, rep_rj, rep_mg, rep_es, rep_outros;
+	
+	public static void main(String[] args) {
+		rep_sp = calculaPercentual(fat_total, fat_sp);
+		rep_rj = calculaPercentual(fat_total, fat_rj);
+		rep_mg = calculaPercentual(fat_total, fat_mg);
+		rep_es = calculaPercentual(fat_total, fat_es);
+		rep_outros = calculaPercentual(fat_total, fat_outros);
+		
+		System.out.println("SP - " + String.format("%.2f", rep_sp) + "%");
+		System.out.println("RJ - " + String.format("%.2f", rep_rj) + "%");
+		System.out.println("MG - " + String.format("%.2f", rep_mg) + "%");
+		System.out.println("ES - " + String.format("%.2f", rep_es) + "%");
+		System.out.println("Outros - " + String.format("%.2f", rep_outros) + "%");
+	}
+	
+	public static double calculaPercentual(double total, double fat) {
+		return (fat*100/total);
+	}
+}
