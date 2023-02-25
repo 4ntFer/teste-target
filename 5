@@ -1,0 +1,21 @@
+public class main {
+
+	public static void main(String[] args) {
+		String entrada = "Teste";
+		
+		System.out.println(inverteString(entrada));
+	}
+	
+	public static String inverteString(String s) {
+		char[] aux = s.toCharArray(), invertida = s.toCharArray();
+		int tam = s.length();
+		
+		int j = tam - 1;
+		for(int i = 0; j >=0 ; i++) {
+			invertida[i] = aux [j];
+			j--;
+		}
+		
+		return new String(invertida);
+	}
+}
